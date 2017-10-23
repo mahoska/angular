@@ -1,6 +1,6 @@
 var app = angular.module("app",[]) //create new module
 
-//var-2-controller
+//task - var-2-controller
 app.controller('SetProduct',SetProduct)
 
 function SetProduct($scope){
@@ -28,7 +28,10 @@ function SetProduct($scope){
 
 
 
-/////////////////////////////////////////////////////////////////
+
+
+
+/////////////////////////Testing clas work///////////////////////////////
 app.controller('SettingController',SettingController)
 
 function SettingController($scope){
