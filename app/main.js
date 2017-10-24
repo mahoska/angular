@@ -1,25 +1,6 @@
 var app = angular.module("app",[]); //create new module
 
-app.controller('Controller', ['$scope', function($scope) {
-  $scope.name = 'Tobias';
-  //$scope.Hi = "Test"
-}])
-.directive('myDialog', function() {
-  return {
-    restrict: 'E',
-    //transclude: true,
-    scope: {
-        sname: '@myParam'
-    },
-    controller:['$scope', function MyTabsController($scope) {
-        $scope.test = 'Test from directive controller!!!!-';
-      }],
-    templateUrl: 'my-dialog.html'
-  };
-});
-
-
-// task-products
+// -------------------task-products----------------------
 app.controller('ProductController',function() {
   })
   .directive('addBlock', function() {
@@ -89,4 +70,27 @@ app.controller('ProductController',function() {
         }
     }
 
+});
+
+
+
+// -------------------testing class work----------------------
+
+
+app.controller('Controller', ['$scope', function($scope) {
+  $scope.name = 'Tobias';
+  //$scope.Hi = "Test"
+}])
+.directive('myDialog', function() {
+  return {
+    restrict: 'E',
+    //transclude: true,
+    scope: {
+        sname: '@myParam'
+    },
+    controller:['$scope', function MyTabsController($scope) {
+        $scope.test = 'Test from directive controller!!!!-';
+      }],
+    templateUrl: 'my-dialog.html'
+  };
 });
