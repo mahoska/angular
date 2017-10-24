@@ -4,68 +4,16 @@
         <script src="./lib/angular/angular.min.js"></script>        
     </head>
     <body> 
-    <h3>Var_1_without_controller:</h3>
-    <form style="margin: 20px; width: 50%">
-       Input product: <input type="text" ng-model="product">
-    </form>
-    <div ng-init="products = [
-    {'name':'apple','count':2}, 
-    {'name':'orange','count':5},
-    {'name':'tomato', 'count':4}, 
-    {'name':'cheese', 'count':3}, 
-    {'name':'milk','count':1}
-    ]">
-        <ul>
-            <li ng-repeat="item in products | filter:product | orderBy:'-count'">
-                {{item.name}} - {{item.count}}
-            </li>
-        </ul>
+            
+    <div ng-controller="Controller as settings" >
+        <my-dialog my-param="Hi"></my-dialog>
     </div>
 
-<hr>
-    <div ng-controller="SetProduct as settings">
-    <h3>Var_2_controller:</h3>
-    <form style="border:1px solid purple; padding:10px; margin: 20px; width: 50%">
-            Search product: <input type="text" ng-model="prod_name_search"><br><br> 
-    </form>
-    <form style="border:1px solid blue; padding:10px; margin: 20px; width: 50%">
-       Input product: <input type="text" ng-model="prod_name"><br><br>
-       Input count: <input type="number" min="0" ng-model="prod_count"><br><br>
-       <input type="button"    ng-click="settings.addProduct(prod_name,prod_count)" value="Add Product"> 
-    </form>
-        <ul>
-            <li ng-repeat="item in settings.product_list | filter:prod_name_search | orderBy:'-count'">
-                {{item.name}} - {{item.count}}
-            </li>
-        </ul>
+    <div ng-controller="ProductController as settings" >
+            <add-block></add-block>
+            <product-list></product-list>
     </div>
-
-<hr>
-
-<div style="margin: 120px;">
-<div>Testing_controllers(class work):</div>
-    <div ng-controller="SettingController as settings">
-        {{name}}
-        {{settings.name}}
-        <div ng-controller="SettingController1 as settings" >
-                {{name}}
-         </div>
-        
-
-        
-        <div ng-controller="SettingController2 as settings"> 
-            <!--onclick="{{settings.addName('lala')}}"-->
-            <input type="text" ng-model="fname"/>
-            <input type="button"    ng-click="settings.addName(fname)" value="Add"> 
-            <ul>
-                    <li ng-repeat="el in settings.names track by $index">
-                        {{el}}
-                    </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
+    
         <script src="main.js"></script>
     </body>
 </html>
