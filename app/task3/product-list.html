@@ -1,0 +1,7 @@
+<h2>Products:</h2>
+<ul>
+        <!-- without function-->
+        <li ng-repeat="item in product_list ">
+                <a ui-sref="book({ bookId: item.id })" style="cursor:pointer"> {{item.name}} </a>
+        </li>
+</ul>

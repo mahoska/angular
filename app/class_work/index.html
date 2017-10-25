@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css.map" rel="stylesheet">
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.min.css.map" rel="stylesheet">
+
+        <script src="../lib/angular/angular.min.js"></script> 
+        <script src="../lib/angular-ui-router/release/angular-ui-router.min.js"></script> 
+        <script src="main.js"></script>
+        <script src="config.js"></script>      
+    </head>
+    <body> 
+
+<h3>Work with router:</h3>        
+    <ul>
+        <li><a ui-sref="hello" ui-sref-active="active">Hello</a></li>
+        <li><a ui-sref="about" ui-sref-active="active">About</a></li>
+    </ul>      
+
+    <ui-view></ui-view>    
+
+<br><hr><br>
+
+<h3>Work with components:</h3>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-2">
+        <left-side></left-side>
+    </div>
+    <div class="col-md-9">
+        <right-side></right-side>
+    </div>
+</div>
+   
+<br><hr><br>
+  
+    </body>
+</html>
+
