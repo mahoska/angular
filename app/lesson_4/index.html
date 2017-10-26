@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css.map" rel="stylesheet">
+        <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.min.css.map" rel="stylesheet">
+
+        <script src="../lib/angular/angular.min.js"></script> 
+        <script src="../lib/angular-ui-router/release/angular-ui-router.min.js"></script> 
+        <script src="main.js"></script>
+        <script src="config.js"></script>      
+    </head>
+    <body>       
+    <ul>
+        <li><a ui-sref="home" ui-sref-active="active">homePage</a></li>
+        <li><a ui-sref="contacts" ui-sref-active="active">Contacts</a></li>
+        <li><a ui-sref="test" ui-sref-active="active">testResolve</a></li>
+        <li><a ui-sref="testOnInit" ui-sref-active="active">testOnInit</a></li>
+    </ul>      
+
+    <ui-view></ui-view>    
+
+    </body>
+</html>
+
