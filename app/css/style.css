@@ -1,0 +1,64 @@
+.product_tabl_el{
+	min-height: 380px;
+	max-height: 380px;
+}
+
+.product_tabl_el img{
+	height: 250px;
+}
+
+.centr{
+	text-align:center;
+}
+
+
+.add_bag_page{
+	margin-top:20px;
+}
+
+#add_bag_btn{
+	width: 100%;
+	background-color : black;
+	color: white;
+}
+
+.productDesc{
+	margin-top:50px;
+	margin-left:20px;
+}
+
+#title{
+	font-size:17px;
+	font-weight:bold;
+	margin-bottom:30px;
+}
+
+#description{
+	font-size:13px;
+}
+
+#price{
+	font-size:19px;
+	font-weight:bold;
+	margin:30px 0;
+	text-align:center;
+}
+
+a.black{
+	color:black;
+	text-decoration:none;
+	display:block;
+	margin-top: 50px;
+	font-size: 14px;
+	font-weight:bold;
+}
+
+#err{
+	margin-top: 10px;
+	text-align:center;
+	color: red;
+}
+
+#main_img{
+	margin-top:30px;
+}

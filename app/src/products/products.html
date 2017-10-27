@@ -1,0 +1,19 @@
+<div class="container centr">
+    <div class="product_selection product_table">
+<div ng-repeat="product in getItems() track by $index">
+    {{item.name}} 
+    <div class="product col-sm-4 col-md-3">
+          <div class="thumbnail product_tabl_el">
+             <img ng-src="{{product.img}}" alt="" class="product-img" />
+             <div class="caption">
+                <h4> 
+                    <a ui-sref="product({ productId: product.id })" style="cursor:pointer"> {{ product.name }}</a>
+                </h4>  
+                 <p><strong></strong>{{ product.price}} EUR</p>
+             </div>
+          </div>
+          
+    </div>
+</div>
+</div>
+</div>

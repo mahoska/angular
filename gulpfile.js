@@ -13,7 +13,7 @@ var htmlPaths = [
 gulp.task('connect', function () {
     connect.server({
       root: './app',
-      port: 8080,
+      port: 8081,
       livereload: true
     });
 });

@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html ng-app="app">
     <head>
-         <title>Lesson_3_Angular</title>   
-    </head>
-    <body> 
+         <title>Shop</title> 
+         <link href="css/bootstrap.min.css" rel="stylesheet">
+         <link href="css/bootstrap.min.css.map" rel="stylesheet">
+         <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+         <link href="css/bootstrap-theme.min.css.map" rel="stylesheet">
+         <link href="css/style.css" rel="stylesheet">
  
-    <ul>
-        <li><a href="task3/index.html">task3</a></li>
-        <li><a href="class_work/index.html">class_work</a></li>
-        <li><a href="lesson_4/index.html">lesson_4</a></li>
-        <li><a href="forms/form.html">work_with_form</a></li>
-    </ul>      
+         <script src="./lib/angular/angular.min.js"></script> 
+         <script src="./lib/angular-ui-router/release/angular-ui-router.min.js"></script> 
+         <script src="./data.json"></script>        
+         <script src="./app.js"></script>
+         <script src="./app.services.js"></script>
+       
+         <script src="src/cart/icon-basket.directive.js"></script>  
 
+         <script src="src/products/products.controller.js"></script> 
+         <script src="src/products/products.component.js"></script>   
+         <script src="src/product/product.controller.js"></script> 
+         <script src="src/product/product.component.js"></script>   
+         <script src="./app.config.js"></script>
+
+    </head>
+    <body ng-app="app"> 
+        <div>
+            <a ui-sref="products" ui-sref-active="active">products</a>
+        </div>
+        <div>
+            <icon-basket></icon-basket>
+        </div>
+
+        <div>
+            <ui-view></ui-view>  
+        </div> 
     </body>
 </html>
 
